@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<title>Boldog Anyák Napját!</title>
+
+<style>
+body {
+    background: linear-gradient(to bottom, #ffe6f0, #fff);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 30px;
+    overflow: hidden;
+}
+
+h1 {
+    color: #d63384;
+    font-size: 40px;
+}
+
+p {
+    font-size: 20px;
+    color: #333;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    display: inline-block;
+    margin-top: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.heart {
+    font-size: 50px;
+    color: red;
+}
+
+/* GOMB */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff66a3;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e05590;
+}
+
+/* ===== LEVÉGŐ SZÍVEK ===== */
+.heart-float {
+    position: absolute;
+    color: #ff4d6d;
+    font-size: 24px;
+    animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh);
+        opacity: 0;
+    }
+}
+
+/* ===== VIRÁGOK ===== */
+.flower {
+    position: absolute;
+    font-size: 26px;
+    animation: floatFlower 8s linear infinite;
+}
+
+@keyframes floatFlower {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>🌸 Boldog Anyák Napját! 🌸</h1>
+
+<div class="card">
+    <p>Kedves Mama!</p>
+
+    <p>
+        Köszönöm, hogy mindig mellettem voltál,<br>
+        és hogy ennyire szerető és gondoskodó vagy. ❤️
+    </p>
+
+    <p>Nagyon szeretlek!</p>
+
+    <div class="heart">❤️</div>
+
+    <p style="margin-top: 20px; font-size: 22px; color: #d63384;">
+        <strong>Szeretettel: Máté ❤️</strong>
+    </p>
+
+    <button onclick="document.getElementById('zene').play()">
+        Indítsd el a zenét 🎵
+    </button>
+</div>
+
+<audio id="zene" loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+</audio>
+
+<!-- SZÍVEK + VIRÁGOK -->
+<div class="heart-float" style="left:10%;">❤️</div>
+<div class="heart-float" style="left:25%; animation-delay:2s;">❤️</div>
+<div class="heart-float" style="left:40%; animation-delay:4s;">❤️</div>
+<div class="heart-float" style="left:60%; animation-delay:1s;">❤️</div>
+<div class="heart-float" style="left:80%; animation-delay:3s;">❤️</div>
+
+<div class="flower" style="left:15%;">🌸</div>
+<div class="flower" style="left:35%; animation-delay:2s;">🌼</div>
+<div class="flower" style="left:55%; animation-delay:4s;">🌸</div>
+<div class="flower" style="left:75%; animation-delay:1s;">🌷</div>
+
+</body>
+</html>
